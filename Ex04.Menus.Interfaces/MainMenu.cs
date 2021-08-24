@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MainMenu
+   public class MainMenu
     {
         private Menu m_Menu;
 

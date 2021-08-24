@@ -1,26 +1,14 @@
 ﻿using System;
+using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    public class Spaces
+    public class Spaces : IExecutable
     {
-        private const char k_Space = ' ';
-
-
-
-        public static void CountSpacesInString(string i_StringToCheck)
+        void IExecutable.Execute()
         {
-            int spacesCounter = 0;
-            
-            foreach(char charInString in i_StringToCheck)
-            {
-                if(charInString.Equals(k_Space))
-                {
-                    spacesCounter++;
-                }
-            }
-
-            Console.WriteLine("The number of spaces is: {0} ", spacesCounter);
+            string userInput = Utils.GetStringFromUser();
+            Utils.CountSpacesInString(userInput);
         }
     }
 }

@@ -1,16 +1,13 @@
 ﻿using System;
+using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    public class Time
+    public class Time : IExecutable
     {
-
-        public static void ShowTime()
+        void IExecutable.Execute()
         {
-            string currentTime = DateTime.Now.ToShortTimeString();
-            
-            Console.Clear();
-            Console.WriteLine("Current time is: {0} ",currentTime);
+            Utils.ShowTime();
         }
     }
 }

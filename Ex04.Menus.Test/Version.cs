@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Ex04.Menus.Interfaces;
 
 namespace Ex04.Menus.Test
 {
-    public class Version
+    public class Version : IExecutable
     {
-        public static void ShowVersion()
+        void IExecutable.Execute()
         {
-            Console.Clear();
-            Console.WriteLine("Version: 21.3.4.8933");
+            Utils.ShowVersion();
         }
+
     }
 }

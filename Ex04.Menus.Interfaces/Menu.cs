@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Ex04.Menus.Interfaces
 {
-
     public class Menu : MenuItem
     {
         private const int k_ExitMenu = 0;
@@ -13,6 +13,11 @@ namespace Ex04.Menus.Interfaces
             : base(i_ItemName, i_PreviousMenu)
         {
             r_MenuItems = new List<MenuItem>();
+        }
+
+        public void Show()
+        {
+            DoWhenMenuItemSelected();
         }
 
         internal override void DoWhenMenuItemSelected()
@@ -25,7 +30,7 @@ namespace Ex04.Menus.Interfaces
 
             if (usersChoice != k_ExitMenu)
             {
-                MenuItems[usersChoice - 1].DoWhenMenuItemSelected();
+                r_MenuItems[usersChoice - 1].DoWhenMenuItemSelected();
             }
             else
             {
@@ -56,16 +61,14 @@ namespace Ex04.Menus.Interfaces
             Console.ReadLine();
             Console.WriteLine("Good bye!");
         }
-
         public void AddMenuItem(MenuItem i_MenuItem)
         {
             r_MenuItems.Add(i_MenuItem);
         }
         public List<MenuItem> MenuItems
         {
-            get { return MenuItems; }
+            get { return r_MenuItems; }
         }
-
         protected int GetInputFromUser()
         {
             bool isValidInput = false;
@@ -90,7 +93,6 @@ namespace Ex04.Menus.Interfaces
 
             return commandFromUser;
         }
-
         protected void PrintMenuItems()
         {
             int i = 0;
@@ -101,6 +103,7 @@ namespace Ex04.Menus.Interfaces
             foreach (MenuItem item in r_MenuItems)
             {
                 Console.WriteLine(@" {0} - {1} ", i + 1, r_MenuItems[i].ItemName);
+                i++;
             }
         }
     }

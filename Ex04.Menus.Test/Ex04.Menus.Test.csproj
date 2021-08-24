@@ -34,15 +34,21 @@
   <ItemGroup>
     <Compile Include="Date.cs" />
     <Compile Include="DelegateMenuCreator.cs" />
+    <Compile Include="InterfaceMenuCreator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Spaces.cs" />
     <Compile Include="Time.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Version.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Ex04.Menus.Delegates\Ex04.Menus.Delegates.csproj">
       <Project>{c5aac705-5ca5-4264-9d54-ce9c4e68a532}</Project>
       <Name>Ex04.Menus.Delegates</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ex04.Menus.Interfaces\Ex04.Menus.Interfaces.csproj">
+      <Project>{c19ffe6b-b6fc-4fcd-a355-2b7f3c06e9b9}</Project>
+      <Name>Ex04.Menus.Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

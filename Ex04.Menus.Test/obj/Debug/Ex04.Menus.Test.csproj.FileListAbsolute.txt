@@ -1,0 +1,11 @@
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.exe
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Test.pdb
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.dll
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Delegates.pdb
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csprojAssemblyReference.cache
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CoreCompileInputs.cache
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.csproj.CopyComplete
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.exe
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\obj\Debug\Ex04.Menus.Test.pdb
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.dll
+C:\Users\dar28\Desktop\Programming\ConsoleMenu\Ex04.Menus.Test\bin\Debug\Ex04.Menus.Interfaces.pdb

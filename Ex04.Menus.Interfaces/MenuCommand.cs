@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Ex04.Menus.Interfaces
 {
-    class MenuCommand : MenuItem
+    public class MenuCommand : MenuItem
     {
         private readonly IExecutable r_Command;
 
@@ -18,7 +18,8 @@ namespace Ex04.Menus.Interfaces
         internal override void DoWhenMenuItemSelected()
         {
             r_Command.Execute();
+            r_PreviousMenu.DoWhenMenuItemSelected();
         }
-
+        
     }
 }
