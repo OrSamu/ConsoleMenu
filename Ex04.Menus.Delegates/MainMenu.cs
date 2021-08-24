@@ -62,6 +62,7 @@ namespace Ex04.Menus.Delegates
             foreach(MenuItem item in r_MenuOptions)
             {
                 Console.WriteLine(@" {0} - {1} ", i + 1, r_MenuOptions[i].Title);
+                i++;
             }
         }
 

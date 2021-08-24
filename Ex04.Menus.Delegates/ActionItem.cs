@@ -7,9 +7,8 @@
         public event ActionSelectedEventHandler ActionSelected;
 
         public ActionItem(string i_Title, Menu i_PreviousItem)
-            : base(i_Title)
+            : base(i_Title, i_PreviousItem)
         {
-
         }
 
         internal override void DoWhenMenuItemSelected()
@@ -23,6 +22,7 @@
             {
                 ActionSelected.Invoke();
             }
+            PreviousMenuItem.DoWhenMenuItemSelected();
         }
 
     }

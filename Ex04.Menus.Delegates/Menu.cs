@@ -22,7 +22,7 @@ namespace Ex04.Menus.Delegates
 
             if(usersChoice != k_Back)
             {
-                MenuItemList[usersChoice - 1].DoWhenMenuItemSelected();
+                MenuOptions[usersChoice - 1].DoWhenMenuItemSelected();
             }
             else
             {

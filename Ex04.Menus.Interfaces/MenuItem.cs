@@ -1,28 +1,29 @@
-﻿namespace Ex04.Menus.Interfaces
-{
-    public class MenuItem
-    {
-        private string m_Title;
-        private readonly Menu r_PreviousMenu;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
-        protected MenuItem(string i_Title, Menu i_PreviousMenu)
+namespace Ex04.Menus.Interfaces
+{
+    public abstract class MenuItem
+    {
+        protected readonly string r_ItemName;
+        protected readonly Menu r_PreviousMenu;
+        protected MenuItem(string i_ItemName, Menu i_PreviousMenu)
         {
-            m_Title = i_Title;
+            r_ItemName = i_ItemName;
             r_PreviousMenu = i_PreviousMenu;
         }
-
-        public string Title
+        public string ItemName
         {
-            get { return m_Title; }
-            set { m_Title = value; }
+            get { return r_ItemName; }
         }
 
-        public MenuItem PreviousMenu
+        public Menu PreviousMenuItem
         {
-            get
-            { return r_PreviousMenu; }
+            get { return r_PreviousMenu; }
         }
 
-        internal abstract void Activate();
+        internal abstract void DoWhenMenuItemSelected();
     }
 }

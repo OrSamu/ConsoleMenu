@@ -9,8 +9,8 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-            Console.WriteLine("Menu");
-            Date.ShowDate();
+            Delegates.MainMenu delegatesMainMenu = DelegateMenuCreator.CreateMenuWithDelegates();
+            delegatesMainMenu.Show();
         }
     }
 }
