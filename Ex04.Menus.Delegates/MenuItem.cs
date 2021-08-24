@@ -16,6 +16,7 @@
             get { return r_Title; }
         }
 
+
         public MenuItem PreviousMenuItem
         {
             get { return r_PreviousMenu; }

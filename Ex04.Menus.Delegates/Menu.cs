@@ -7,19 +7,9 @@ namespace Ex04.Menus.Delegates
     {
         private const int k_Back = 0;
 
-        public Menu(string i_Title, Menu i_PreviousMenu)
+        public Menu(string i_Title, MenuItem i_PreviousMenu)
             : base(i_Title,i_PreviousMenu)
         {
-        }
-
-        public List<MenuItem> MenuItemList
-        {
-            get { return MenuItemList; }
-        }
-
-        public void AddMenuItem(MenuItem i_MenuItem)
-        {
-            MenuItemList.Add(i_MenuItem);
         }
 
         internal override void DoWhenMenuItemSelected()

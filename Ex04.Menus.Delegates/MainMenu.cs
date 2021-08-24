@@ -7,39 +7,43 @@ namespace Ex04.Menus.Delegates
     public class MainMenu : MenuItem
     {
         private const int k_Exit = 0;
-        private readonly List<MenuItem> r_ItemsInTheMenu;
+        private readonly List<MenuItem> r_MenuOptions;
 
         public MainMenu(string i_Title):base(i_Title,null)
         {
-            r_ItemsInTheMenu = new List<MenuItem>();
+            r_MenuOptions = new List<MenuItem>();
         }
 
         internal MainMenu(string i_Title,MenuItem i_PreviousItem) : base(i_Title, i_PreviousItem)
         {
-            r_ItemsInTheMenu = new List<MenuItem>();
+            r_MenuOptions = new List<MenuItem>();
         }
 
-        /*public List<MenuItem> MenuOptions
+        public List<MenuItem> MenuOptions
         {
-            get { return r_ItemsInTheMenu; }
-        }*/
+            get { return r_MenuOptions; }
+        }
+
+        public void AddMenuItem(MenuItem i_MenuItem)
+        {
+            MenuOptions.Add(i_MenuItem);
+        }
 
         public void Show()
         {
             bool stopLoop = false;
             int usersChoice;
-
-            PrintMenuItems();
-            PrintLastOption();
-
+            
             while (!stopLoop)
             {
+                PrintMenuItems();
+                PrintLastOption();
                 usersChoice = GetInputFromUser();
                 stopLoop = usersChoice == k_Exit;
 
                 if(!stopLoop)
                 {
-                    r_ItemsInTheMenu[usersChoice - 1].DoWhenMenuItemSelected();
+                    r_MenuOptions[usersChoice - 1].DoWhenMenuItemSelected();
                 }
                 else
                 {
@@ -55,9 +59,9 @@ namespace Ex04.Menus.Delegates
             Console.Clear();
             Console.WriteLine(" {0} ", this.Title);
 
-            foreach(MenuItem item in r_ItemsInTheMenu)
+            foreach(MenuItem item in r_MenuOptions)
             {
-                Console.WriteLine(@" {0} - {1} ", i + 1, r_ItemsInTheMenu[i].Title);
+                Console.WriteLine(@" {0} - {1} ", i + 1, r_MenuOptions[i].Title);
             }
         }
 
@@ -74,7 +78,7 @@ namespace Ex04.Menus.Delegates
 
                 if(isValidInput)
                 {
-                    isValidInput = commandFromUser >= 0 && commandFromUser <= r_ItemsInTheMenu.Count;
+                    isValidInput = commandFromUser >= 0 && commandFromUser <= r_MenuOptions.Count;
                 }
 
                 if(!isValidInput)
