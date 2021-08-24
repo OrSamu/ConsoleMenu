@@ -31,71 +31,24 @@ namespace Ex04.Menus.Test
 
         private static void countSpaceAction_ActionSelected()
         {
-            char space = ' ';
-            int spacesCounter = 0;
-            string stringToCheck = getStringFromUser();
-
-            foreach (char charInString in stringToCheck)
-            {
-                if (charInString.Equals(space))
-                {
-                    spacesCounter++;
-                }
-            }
-
-            Console.WriteLine("The number of spaces is: {0} ", spacesCounter);
-            waitForUserToContinue();
+            string userInput = Utils.GetStringFromUser();
+            Utils.CountSpacesInString(userInput);
         }
 
         private static void showVersionAction_ActionSelected()
         {
-            Console.Clear();
-            Console.WriteLine("Version: 21.3.4.8933");
-            waitForUserToContinue();
+            Utils.ShowVersion();
         }
 
         private static void showDateAction_ActionSelected()
         {
-            string currentDate = DateTime.Now.ToShortDateString();
-
-            Console.Clear();
-            Console.WriteLine("Today's data is: {0} ", currentDate);
-            waitForUserToContinue();
+           Utils.ShowDate();
         }
 
         private static void showTimeAction_ActionSelected()
         {
-            string currentTime = DateTime.Now.ToShortTimeString();
-
-            Console.Clear();
-            Console.WriteLine("Current time is: {0} ", currentTime);
-            waitForUserToContinue();
+            Utils.ShowTime();
         }
 
-        private static void waitForUserToContinue()
-        {
-            Console.WriteLine("Press enter to continue...");
-            Console.ReadLine();
-        }
-
-        private static string getStringFromUser()
-        {
-            bool isValidString = false;
-            string stringInput = "";
-
-            Console.Write("Please enter your string: ");
-            while (!isValidString)
-            {
-                stringInput = Console.ReadLine();
-
-                isValidString = !string.IsNullOrEmpty(stringInput);
-                if (!isValidString)
-                {
-                    Console.Write("String missing, please try again: ");
-                }
-            }
-
-            return stringInput;
-        }
     }
 }

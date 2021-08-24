@@ -9,11 +9,11 @@ namespace Ex04.Menus.Test
     {
         public static void Main()
         {
-          //  Delegates.MainMenu delegatesMainMenu = DelegateMenuCreator.CreateMenuWithDelegates();
-          //  delegatesMainMenu.Show();
-
             Interfaces.MainMenu intefacesMainMenu = InterfaceMenuCreator.CreateMenuWithInterfaces();
             intefacesMainMenu.Menu.Show();
+
+            Delegates.MainMenu delegatesMainMenu = DelegateMenuCreator.CreateMenuWithDelegates();
+            delegatesMainMenu.Show();
         }
     }
 }
